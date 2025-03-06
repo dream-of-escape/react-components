@@ -12,5 +12,11 @@
 .badges {
     display: flex;
     gap: 5px;
-    margin: 10px;
+    margin:  10px 0;
+}
+
+.banners {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
