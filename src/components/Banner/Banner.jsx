@@ -29,7 +29,7 @@ export default function Banner({type = "neutral", children}) {
             <Icon className="icon"/>
             <div className="banner-text">
                 <h2 className="banner-headline">{heading}</h2>
-                {children ? children : ""}
+                {children ? <div className={`banner-children`}>{children}</div> : null}
             </div>
         </div>
     )

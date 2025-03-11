@@ -22,24 +22,23 @@ div.banner-text {
 h2.banner-headline {
     font-weight: bold;
     font-size: .875rem;
-    margin-bottom: .5em;
 }
 
-div.banner-text:not(:first-child) {
-    
+div.banner-children {
     font-weight: 400;
     font-size: .875rem;
+    margin-top: .5em;
 }
 
 
 /* Colors for badge styles */
 .success {
-    color: #065F46;
+    color: #047857;
     background-color: #ECFDF5;
 }
 
-.success:not(h2){
-    color: #047857;
+.success h2:first-child{
+    color: #065F46;
 }
 
 FaCheckCircle {
@@ -47,12 +46,12 @@ FaCheckCircle {
 }
 
 .warning {
-    color: #92400E;
+    color: #B45309;
     background-color: #FFFBEB;
 }
 
-.warning:not(h2){
-    color: #B45309;
+.warning h2:first-child{
+    color: #92400E;   
 }
 
 FaExclamationTriangle {
@@ -60,12 +59,12 @@ FaExclamationTriangle {
 }
 
 .error {
-    color: #92400E;
+    color: #B45309;
     background-color: #FEF2F2;
 }
 
-.error:not(h2){
-    color: #B45309;
+.error h2:first-child{
+    color: #92400E;
 }
 
 FaTimesCircle {
@@ -73,12 +72,12 @@ FaTimesCircle {
 }
 
 .neutral {
-    color: #1E40AF;
+    color: #1C51B9;
     background-color: #EFF6FF;
 }
 
-.neutral:not(h2){
-    color: #1C51B9;
+.neutral h2:first-child {
+    color: #1E40AF;
 }
 
 FaInfoCircle {

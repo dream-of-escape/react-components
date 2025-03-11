@@ -4,7 +4,7 @@ import Menu from "./src/components/Menu/index"
 import Star from "./src/components/Star"
 import Badge from "./src/components/Badge/Badge"
 import Banner from "./src/components/Banner/Banner"
-
+import Card from "./src/components/Card/Card"
 
 
 const badgeColors = ["gray", "red", "yellow", "green", "blue", "indigo", "purple", "pink"]
@@ -38,13 +38,25 @@ function App() {
         </Banner>
         <Banner type="warning" /> 
         <Banner type="error"> 
-        <p>This is the banner for a error style, and the next is a error single-line.</p>
+        <p>This is the banner for an error style, and the next is an error single-line.</p>
         </Banner>
         <Banner type="error" /> 
         <Banner type="neutral"> 
-        <p>This is the banner for a neautral style, and the next is a neutral single-line.</p>
+        <p>This is the banner for a neutral style, and the next is a neutral single-line.</p>
         </Banner>
         <Banner type="neutral" />
+        <Banner type="neutral"> 
+          <p>This is the banner for a neutral style.</p>
+          <span>I wanted to see what would happen with multiple children.</span>
+          <h4>Especially with different element types.</h4>
+          <h1>H1 is probably pretty bad.</h1>
+        </Banner>
+      </section>
+      <section className="cards">
+        <Card>
+          <h1>Test Card</h1>
+          <p>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+        </Card>
       </section>
     </>
   )
