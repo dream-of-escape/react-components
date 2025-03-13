@@ -5,6 +5,7 @@ import Star from "./src/components/Star"
 import Badge from "./src/components/Badge/Badge"
 import Banner from "./src/components/Banner/Banner"
 import Card from "./src/components/Card/Card"
+import Testimonial from "./src/components/Testimonial/Testimonial"
 
 
 const badgeColors = ["gray", "red", "yellow", "green", "blue", "indigo", "purple", "pink"]
@@ -57,6 +58,11 @@ function App() {
           <h1>Test Card</h1>
           <p>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
         </Card>
+      </section>
+      <section className="testimonials">
+        <Testimonial img="./src/assets/headshot.jpg" name="May Andersons" role="Workcation, CTO">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+        </Testimonial>
       </section>
     </>
   )

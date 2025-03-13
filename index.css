@@ -20,3 +20,13 @@
     flex-direction: column;
     gap: 5px;
 }
+
+.cards {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    width: 50%;
+    height: 300px;
+}
