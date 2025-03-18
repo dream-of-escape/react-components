@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import Menu from "./src/components/Menu/index"
 import Star from "./src/components/Star"
 import Badge from "./src/components/Badge/Badge"
-import Banner from "./src/components/Banner/Banner"
-import Card from "./src/components/Card/Card"
+import Banner from "./src/components/Banner/index"
+import Card from "./src/components/Card/index"
 import Testimonial from "./src/components/Testimonial/Testimonial"
+import { HiOutlineCloudUpload } from "react-icons/hi"
 
 
 const badgeColors = ["gray", "red", "yellow", "green", "blue", "indigo", "purple", "pink"]
-const badgeShapes = ["square", "pill"]
 const squareBadges = badgeColors.map(color => <Badge key={`${color}-square`} color={color} shape="square">{color} square</Badge>)
 const pillBadges = badgeColors.map(color =>  <Badge key={`${color}-pill`} color={color} shape="pill">{color} pill</Badge>)
 
@@ -19,15 +19,23 @@ function App() {
   return (
     <>
       <Badge>default badge</Badge>
+      
       <section className='badges'>
         {squareBadges}
       </section>
+      
       <section className='badges'>
         {pillBadges}
       </section>
+      
       <section className='banners'>
-        <Banner> 
-          <p>This is the default banner if no styles are selected. The next is the default no children banner.</p>
+        <Banner>
+          <Banner.Header>
+            This is the default banner.
+          </Banner.Header> 
+          <Banner.Content>
+            There were no styles selected.
+          </Banner.Content>
         </Banner>
         <Banner /> 
         <Banner type="success"> 
@@ -53,12 +61,21 @@ function App() {
           <h1>H1 is probably pretty bad.</h1>
         </Banner>
       </section>
+      
       <section className="cards">
         <Card>
-          <h1>Test Card</h1>
-          <p>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+          <Card.Icon>
+            <HiOutlineCloudUpload />
+          </Card.Icon>
+          <Card.Header>
+            Easy Deployment
+          </Card.Header>
+          <Card.Content>
+            Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+          </Card.Content>
         </Card>
       </section>
+      
       <section className="testimonials">
         <Testimonial img="./src/assets/headshot.jpg" name="May Andersons" role="Workcation, CTO">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>

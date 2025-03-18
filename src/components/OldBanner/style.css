@@ -1,4 +1,4 @@
-.banner {
+div.banner {
     padding: 1em;
     display: flex;
     border-radius: 6px;
@@ -10,7 +10,7 @@
     width: 1em;
 }
 
-.banner-text {
+div.banner-text {
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,12 +19,12 @@
     height: 100%;
 }
 
-.banner-header {
+h2.banner-headline {
     font-weight: bold;
     font-size: .875rem;
 }
 
-.banner-children {
+div.banner-children {
     font-weight: 400;
     font-size: .875rem;
     margin-top: .5em;
