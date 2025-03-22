@@ -5,7 +5,7 @@ import Star from "./src/components/Star"
 import Badge from "./src/components/Badge/Badge"
 import Banner from "./src/components/Banner/index"
 import Card from "./src/components/Card/index"
-import Testimonial from "./src/components/Testimonial/Testimonial"
+import Testimonial from "./src/components/Testimonial/index"
 import { HiOutlineCloudUpload } from "react-icons/hi"
 
 
@@ -13,6 +13,29 @@ const badgeColors = ["gray", "red", "yellow", "green", "blue", "indigo", "purple
 const squareBadges = badgeColors.map(color => <Badge key={`${color}-square`} color={color} shape="square">{color} square</Badge>)
 const pillBadges = badgeColors.map(color =>  <Badge key={`${color}-pill`} color={color} shape="pill">{color} pill</Badge>)
 
+const bannerStyles = ["neutral", "success", "warning", "error", undefined]
+const multiBannerEls = bannerStyles.map( style => {
+  return (
+    <Banner key={`multi-${style}`} type={style}>
+      <Banner.Header>
+        Selected style: {style}
+      </Banner.Header>
+      <Banner.Content>
+        This is a multiline banner using this style: {style}
+      </Banner.Content>
+    </Banner>
+  )
+})
+
+const singleBannerEls = bannerStyles.map( style => {
+  return (
+    <Banner key={`single-${style}`} type={style}>
+      <Banner.Header>
+        Single-line style: {style}
+      </Banner.Header>
+    </Banner>
+  )
+})
 
 
 function App() {
@@ -29,37 +52,8 @@ function App() {
       </section>
       
       <section className='banners'>
-        <Banner>
-          <Banner.Header>
-            This is the default banner.
-          </Banner.Header> 
-          <Banner.Content>
-            There were no styles selected.
-          </Banner.Content>
-        </Banner>
-        <Banner /> 
-        <Banner type="success"> 
-        <p>This is the banner for a successful style, and the next is a successful single-line.</p>
-        </Banner>
-        <Banner type="success" /> 
-        <Banner type="warning"> 
-        <p>This is the banner for a warning style, and the next is a warning single-line.</p>
-        </Banner>
-        <Banner type="warning" /> 
-        <Banner type="error"> 
-        <p>This is the banner for an error style, and the next is an error single-line.</p>
-        </Banner>
-        <Banner type="error" /> 
-        <Banner type="neutral"> 
-        <p>This is the banner for a neutral style, and the next is a neutral single-line.</p>
-        </Banner>
-        <Banner type="neutral" />
-        <Banner type="neutral"> 
-          <p>This is the banner for a neutral style.</p>
-          <span>I wanted to see what would happen with multiple children.</span>
-          <h4>Especially with different element types.</h4>
-          <h1>H1 is probably pretty bad.</h1>
-        </Banner>
+        {multiBannerEls}  
+        {singleBannerEls}
       </section>
       
       <section className="cards">
@@ -77,8 +71,14 @@ function App() {
       </section>
       
       <section className="testimonials">
-        <Testimonial img="./src/assets/headshot.jpg" name="May Andersons" role="Workcation, CTO">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.</p>
+        <Testimonial>
+          <Testimonial.Logo>
+            <img src="./src/assets/logo.png" alt="Workcation logo" />
+          </Testimonial.Logo>
+          <Testimonial.Content>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit."
+          </Testimonial.Content>
+          <Testimonial.Citation author="May Anderson" title="Workcation, CTO" />
         </Testimonial>
       </section>
     </>

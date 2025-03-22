@@ -1,0 +1,33 @@
+.testimonial-container{
+    color: #111827;
+}
+
+.testimonial-logo {
+    margin-bottom: 2.25em;
+}
+
+.testimonial-content {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin-bottom: 1.75em;
+}
+
+.citation-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.citation-title{
+    color: #6B7280;
+}
+
+.desktop-separator {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-separator {
+        display: block;
+    }
+}

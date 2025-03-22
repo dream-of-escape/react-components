@@ -1,5 +1,7 @@
 export default function BannerHeader ({ children }) {
-    <div className="banner-header">
-        {children}
-    </div>
+    return (
+        <div className="banner-header">
+            {children}
+        </div>
+    )
 }
