@@ -75,10 +75,9 @@ function App() {
           <Testimonial.Logo>
             <img src="./src/assets/logo.png" alt="Workcation logo" />
           </Testimonial.Logo>
-          <Testimonial.Content>
+          <Testimonial.Citation author="May Anderson" title="Workcation, CTO">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit."
-          </Testimonial.Content>
-          <Testimonial.Citation author="May Anderson" title="Workcation, CTO" />
+          </Testimonial.Citation>
         </Testimonial>
       </section>
     </>
